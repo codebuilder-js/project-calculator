@@ -1,0 +1,1 @@
+A simple calculator project with functions for all of the basic math operators you tipically find on simple calculators.
