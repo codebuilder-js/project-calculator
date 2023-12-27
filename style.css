@@ -18,7 +18,8 @@
     border-radius: 8px;
     
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    gap: 4px;
+    grid-template-columns: repeat(4, 1fr);
   }
   
   #display {
@@ -28,4 +29,14 @@
     border: 1px solid #ccc;
     border-radius: 8px;
     text-align: right;
+
+    grid-column-start: 1;
+    grid-column-end: 5;
+  }
+
+  #equal {
+    grid-column-start: 4;
+    grid-column-end: 5;
+    grid-row-start: 3;
+    grid-row-end: 7;
   }
