@@ -38,7 +38,7 @@ body {
     grid-column-end: 5;
 }
 
-#equal {
+#operate {
     background-color: #ff9500;
 
     grid-column-start: 4;
@@ -47,7 +47,7 @@ body {
     grid-row-end: 7;
 }
 
-#equal:hover {
+#operate:hover {
     background-color: #e08301;
 }
 

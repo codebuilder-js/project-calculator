@@ -1,5 +1,6 @@
 const display = document.querySelector('#display');
 const buttons = document.querySelectorAll('button');
+const operate = document.querySelector('#operate');
 
 function Calculator() {
   this.methods = {
@@ -29,8 +30,17 @@ buttons.forEach(button => {
   button.addEventListener('click', () => {
     const buttonValue = button.innerHTML || button.innerText;
 
+    if (['+', '-', '×', '÷', '=', 'AC'].includes(buttonValue)) {
+      return;
+    }
+
     display.value += buttonValue;
+    //display.value += buttonValue;
   });
+});
+
+operate.addEventListener('click', () => {
+  console.log('You clicked on the operate button!');
 });
   
 const calculator = new Calculator;
