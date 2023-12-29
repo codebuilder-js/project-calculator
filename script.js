@@ -29,7 +29,7 @@ buttons.forEach(button => {
   button.addEventListener('click', () => {
     const buttonValue = button.innerHTML || button.innerText;
 
-    console.log(buttonValue);
+    display.value += buttonValue;
   });
 });
   
