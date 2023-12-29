@@ -1,6 +1,7 @@
 const display = document.querySelector('#display');
 const buttons = document.querySelectorAll('button');
 const operate = document.querySelector('#operate');
+const clear = document.querySelector('#clear');
 
 function Calculator() {
   this.methods = {
@@ -41,6 +42,10 @@ buttons.forEach(button => {
 
 operate.addEventListener('click', () => {
   console.log('You clicked on the operate button!');
+});
+
+clear.addEventListener('click', () => {
+  display.value = '';
 });
   
 const calculator = new Calculator;
