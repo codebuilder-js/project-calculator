@@ -53,3 +53,4 @@ clear.addEventListener('click', () => {
   display.value = '';
 });
   
+console.log('Finish.');
