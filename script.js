@@ -7,8 +7,8 @@ function Calculator() {
   this.methods = {
     '+': (a, b) => a + b,
     '-': (a, b) => a - b,
-    '*': (a, b) => a * b,
-    '/': (a, b) => {
+    '×': (a, b) => a * b,
+    '÷': (a, b) => {
       return (b === 0) ? 'Cannot divide by zero' : a / b
     },
   };
@@ -31,23 +31,25 @@ buttons.forEach(button => {
   button.addEventListener('click', () => {
     const buttonValue = button.innerHTML || button.innerText;
 
-    if (['+', '-', '×', '÷', '=', 'AC'].includes(buttonValue)) {
+    if (['=', 'AC'].includes(buttonValue)) {
       return;
     }
 
-    display.value += buttonValue;
-    //display.value += buttonValue;
+    if(['+', '-', '×', '÷'].includes(buttonValue)) {
+      display.value += ` ${buttonValue} `;
+    } else {
+      display.value += buttonValue;
+    }
   });
 });
 
 operate.addEventListener('click', () => {
-  console.log('You clicked on the operate button!');
+  const calculator = new Calculator;
+  
+  display.value = calculator.calculate(display.value);
 });
 
 clear.addEventListener('click', () => {
   display.value = '';
 });
   
-const calculator = new Calculator;
-  
-console.log(calculator.calculate('2 + 0'));
