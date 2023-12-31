@@ -46,11 +46,9 @@ buttons.forEach(button => {
 operate.addEventListener('click', () => {
   const calculator = new Calculator;
   
-  display.value = calculator.calculate(display.value);
+  display.value = calculator.calculate(display.value).toFixed(2);
 });
 
 clear.addEventListener('click', () => {
   display.value = '';
 });
-  
-console.log('Finish.');
